@@ -1,13 +1,60 @@
+@media (max-width: 1170px) {
+    header {
+        background-image: url(../img/man-2.jpg);
+        height: 70vh;
+    }
+    header > * {
+        right: 0%;
+        top: 12%;
+        transform: none;
+        padding-right: 2%;
+        transform: scale(0.9);
+    }
+}
+
+
 @media (max-width: 992px) {
     .style-product {
         width: 45%;
         padding-bottom: 45%;
+        margin-top: 10%;
+    }
+
+    .disc {
+        top: 105%;
+    }
+
+    header {
+        background-image: url(../img/man-1.jpg);
+        
+        height: 50vh;
+        padding: 0%;
+    }
+
+    header > * {
+        top: 50%;
+        right: auto;
+        left: auto;
+        width: 100%;
+        
+    }
+
+    header h2,
+    h1 {
+        text-align: center;
+        color: black;
     }
 }
 
 @media (max-width: 480px) {
+
     .style-product {
         width: 95%;
         padding-bottom: 95%;
+        margin-top: 10%;
+    }
+
+    .disc {
+        top: 105%;
     }
 }

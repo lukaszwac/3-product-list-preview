@@ -4,29 +4,57 @@
 
 body {
     margin: 0px;
+    padding: 10px;
 }
 
 /*    FORMATOWANIE OGOLNE -- END --    */
 
 main {
-    padding: 10px;
     height: 100vh;
 }
 
+/*     MENU NAWIGACYJNE     */
 #navi {
-    background-color: aliceblue;
-/*    padding: 10px;*/
+    background-color: rgba(255, 255, 255, 0.38);
+    text-align: right;
     position: fixed;
-    width: 100%;
-    text-align: center;
-    transition: 1s;
+     width: 100%;
 }
 
-li, a {
-    list-style: none;
-    text-decoration-line: none;
+.menu {
+    padding-right: 2%;
+    display: inline-block;
+    text-align: right;
+    margin-right: 20px;
 }
 
+a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;    
+   
+}
+/*     MENU NAWIGACYJNE -- END --     */
+
+
+/* NAGLOWEK */
+
+header {
+    background-image: url(../img/man-1.jpg);
+    background-size: cover;
+    background-position: center;
+    
+    height: 100vh;
+    padding: 4%;
+}
+
+header >* {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    color: white;
+    font-family: verdana;
+}
 
 /* FORMATOWANIE GŁOWNEGO OKNA OBRAZU PRODUKTU*/
 
@@ -39,12 +67,12 @@ li, a {
     margin: 2.5%;
     background-position: center;
     background-size: cover;
-    overflow: hidden;
     border-radius: 10px;
     top: 10%;
-    box-shadow: 0px 5px 13px #a5a5a5;
+    box-shadow: 0px 5px 13px #a5a5a5;  
+    transition: 0.4s;
+    margin-top: 5%;
 }
-
 /* FORMATOWANIE GŁOWNEGO OKNA OBRAZU PRODUKTU - END - */
 
 #product1 {
@@ -67,33 +95,37 @@ li, a {
 
 }
 
-/* FORMATOWANIE ZAWARTOSCI BOXU PRODUKTU*/
-
-.content {
-    position: absolute;
-    background-color: white;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.7s;
-    display: inline;
-    text-align: center;
-}
-
-/* FORMATOWANIE ZAWARTOSCI BOXU PRODUKTU -- END -- */
 
 .fa {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 35%;
-    border: solid 1px #818181;
-    border-radius: 15px;
-
+    padding: 50%;
+    padding-bottom: 45%;
+    border-bottom: solid 1px #acacac;
+    opacity: 0;
+    transition: 0.5s;
 }
 
-.content:hover {
+
+.fa:hover {
     opacity: 1;
     background-color: rgba(255, 255, 255, 0.69);
+}
+
+.fa:hover ~ .disc {
+    opacity: 1;
+}
+
+.disc {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+    top: 110%;
+    font-size: 1em;
+    color: #6c6c6c;
+    opacity: 0;
+    transition: 0.5s;
 }
