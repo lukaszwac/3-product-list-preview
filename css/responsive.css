@@ -33,16 +33,21 @@
 
     header > * {
         top: 50%;
-        right: auto;
-        left: auto;
-        width: 100%;
+        padding: 0;
         
+        width: 100%;        
     }
 
     header h2,
     h1 {
         text-align: center;
         color: black;
+        
+        font-size: 1.6em;
+    }
+    
+    header h2 {
+        font-size: 1.3em;
     }
 }
 
